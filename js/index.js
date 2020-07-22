@@ -5,6 +5,7 @@ var crowdEnabled = false;
 var camEnabled = false;
 var outlinesEnabled = false;
 
+
 // UI state
 var controlModeActive = false;
 var headerVisible = false;
@@ -198,15 +199,35 @@ function selectVideoItem() {
     switch (activeVideoNavItem) {
         case CAM_ON:
             camEnabled = true;
+            $("#box").addClass("red");
+            $("#box").removeClass("green");
+            console.log(1 + 100)
+
             break;
         case CAM_OFF:
             camEnabled = false;
+            $("#box").addClass("green");
+            $("#box").removeClass("red");
+
             break;
         case OUTLINE_ON:
             outlinesEnabled = true;
+            console.log(5 + 5)
+            $("#toggleC").addClass("CrowdSee");
+            $("#toggleC").removeClass("CrowdHide");
+            $("#toggledj").removeClass("CrowdSee");
+            $("#toggledj").addClass("CrowdHide");
+
+
             break;
         case OUTLINE_OFF:
             outlinesEnabled = false;
+            $("#toggleC").removeClass("CrowdSee");
+            $("#toggleC").addClass("CrowdHide");
+            $("#toggledj").addClass("CrowdSee");
+            $("#toggledj").removeClass("CrowdHide");
+
+            console.log(1 + 1)
             break;
       }
 }
@@ -291,6 +312,7 @@ function render() {
     } else {
         $("#crowd-on").removeClass("enabled");
         $("#crowd-off").addClass("enabled");
+
     }
     switch (activeAudioNavItem) {
         case 0:
@@ -357,7 +379,7 @@ function render() {
             $("#cam-off").removeClass("active");
             $("#outlines-on").addClass("active");
             $("#outlines-off").removeClass("active");
-            break;            
+            break;           
         case OUTLINE_OFF:
             $("#cam-on").removeClass("active");
             $("#cam-off").removeClass("active");

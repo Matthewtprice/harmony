@@ -86,14 +86,60 @@ html, body {
 	height: 100%;
 }
 
-html { 
-	background: url("../images/concert.png") no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
+.dj { 
+	background-image: url(../images/justdj.gif);
+	width: 100vw;
+	height: 100vh;
+	z-index: 2;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.crowdG { 
+	background-image: url(../images/djcrowd.gif);
+	z-index: 1;
+	width: 100vw;
+	height: 100vh;
+	background-repeat: no-repeat;
 	background-size: cover;
   }
+  .me { 
+	background-image: url(../images/Natalie.png);
+	z-index: 3;
+	background-repeat: no-repeat;
+  }
 
+.startview {
+	opacity: 100;
+}
+.startnoview {
+	opacity: 0;
+}
+.CrowdSee {
+	display: true;
+	opacity: 100;
+}
+.CrowdHide {
+	display: none;
+
+}
+/* testing box */
+#box{
+	height: 100px;
+	width: 100px;
+	color: orchid;
+}
+.red{
+	height: 100px;
+	width: 100px;
+	background-color: red;
+	color: orchid;
+}
+.green{
+	height: 100px;
+	width: 100px;
+	background-color: green;
+	color: orchid;
+}
 .full-height {
 	height: 100%;
 }
@@ -135,3 +181,9 @@ li a {
     padding: 24px 17px;
     text-decoration: none;
 }
+/* #audio-menu {
+	display:none;
+}
+#video-menu {
+	display:none;
+} */
